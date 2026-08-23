@@ -1,15 +1,22 @@
-# Rise Web — ressource FiveM (copier dans server.cfg)
+# Rise Web — connexion in-game → site (shop Tebex sur risefa.fr)
 #
-# rise_web_url     : URL du site Laravel (prod : https://risefa.fr)
+# rise_web_url     : URL du site (prod : https://risefa.fr)
 # rise_web_secret  : identique à RISE_GAME_AUTH_SECRET dans le .env du site
+# rise_web_key     : touche pour ouvrir le site (F10 par défaut, "" pour désactiver)
 #
 # Installation :
-#   1. Copier le dossier fivem/rise-web vers resources/[local]/rise-web
+#   1. Copier fivem/rise-web → resources/[local]/rise-web
 #   2. Ajouter les lignes ci-dessous
-#   3. Redémarrer la ressource ou le serveur
-#   4. En jeu : /site → ouvre le navigateur avec un lien signé
+#   3. Brancher un BOUTON menu (voir README admin ci-dessous) ou utiliser F10 / /site
+#
+# --- Bouton menu (ex. ox_lib) côté CLIENT ---
+#   onSelect = function() exports['rise-web']:openSite() end
+#
+# --- Bouton menu côté SERVEUR (autre ressource) ---
+#   exports['rise-web']:openSite(source)
 
 set rise_web_url "https://risefa.fr"
 set rise_web_secret "VOTRE_SECRET_IDENTIQUE_AU_.ENV"
+set rise_web_key "F10"
 
 ensure rise-web

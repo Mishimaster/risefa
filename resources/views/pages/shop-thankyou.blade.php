@@ -8,7 +8,7 @@
       <h1 class="font-pricedown text-4xl sm:text-5xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Merci pour votre achat !</h1>
       <p class="mt-4 text-lg text-slate-300">Votre paiement Tebex est en cours de traitement. Le pack sera livré sur le serveur si vous êtes connecté.</p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-        <a href="{{ route('shop.index') }}" class="rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-6 py-3 font-semibold text-cyan-100 transition hover:bg-cyan-500/35">Retour au shop</a>
+        <a href="{{ route('shop.index') }}" class="rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-6 py-3 font-semibold text-cyan-100 transition hover:bg-cyan-500/35">Retour à la boutique</a>
         <a href="{{ route('account.show') }}" class="rounded-xl border border-white/15 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/15">Mon compte</a>
       </div>
     </div>

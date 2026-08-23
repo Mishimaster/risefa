@@ -18,20 +18,45 @@
 
     <section id="features" class="reveal px-6 py-20">
       <div class="mx-auto max-w-[1400px]">
-        <h2 class="font-pricedown text-5xl text-center mb-10 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Pourquoi Rise ?</h2>
-        <div class="rounded-3xl border border-white/15 bg-black/40 p-8 sm:p-10 backdrop-blur">
-          <h3 class="text-3xl font-pricedown text-white mb-5">🔥Tu recherches un serveur GTA RP innovant, sérieux et immersif ?</h3>
-          <div class="space-y-4 text-slate-300 text-lg leading-relaxed">
-            <h4 class="text-cyan-200 font-bold">🚀Rise est fait pour toi !</h4>
-            <p>🦹Notre équipe de 6 passionnés travail sans relâche pour créer un univers RP réaliste et captivant. Nous voulons offrir aux joueurs une expérience unique, où chaque choix compte et où l'histoire de ton personnage évolue selon tes actions.</p>
-            <h4 class="text-cyan-200 font-bold">🎯Ce que nous proposons :</h4>
-            <p>🌍Un monde ouvert riche et immersif. Une ville vivante avec des quartiers dynamiques et une véritable hiérarchie sociale.</p>
-            <p>🏢Des opportunités de carrière variées. Deviens policier, médecin, avocat, entrepreneur, criminel ou même maire de la ville !</p>
-            <p>🚗Un système économique réaliste. Gère ton business, investis, et fais fortune ou tombe dans l'illégalité.</p>
-            <p>🔫Des interactions et actions poussées. Système de drogues, braquages, gestion de gangs, forces de l'ordre bien organisées.</p>
-            <p>⚒️Un staff actif et à l'écoute. Nous sommes là pour assurer une expérience RP fluide et équilibrée.</p>
-            <p>👥Une communauté soudée et respectueuse. Ici, le fair-play et le RP de qualité sont au centre de tout.</p>
-          </div>
+        <h2 class="font-pricedown text-5xl text-center mb-4 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Pourquoi Rise ?</h2>
+        <p class="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">Un serveur GTA RP pensé pour l'immersion, la progression et une communauté exigeante.</p>
+
+        <div class="mb-12 rounded-3xl border border-cyan-300/20 bg-gradient-to-br from-black/50 via-black/40 to-cyan-950/20 p-8 sm:p-10 backdrop-blur shadow-[0_0_40px_rgba(51,153,255,0.08)]">
+          <p class="text-xl sm:text-2xl font-semibold text-white leading-snug">Tu recherches un serveur GTA RP innovant, sérieux et immersif ?</p>
+          <p class="mt-4 text-slate-300 text-lg leading-relaxed">Rise est fait pour toi. Notre équipe de passionnés travaille sans relâche pour créer un univers RP réaliste et captivant, où chaque choix compte et où l'histoire de ton personnage évolue selon tes actions.</p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="group rounded-2xl border border-white/10 bg-black/40 p-6 backdrop-blur transition duration-300 hover:border-cyan-400/35 hover:bg-black/55 hover:shadow-[0_0_28px_rgba(34,211,238,0.12)]">
+            <div class="mb-4 h-1 w-10 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-200/40 transition-all duration-300 group-hover:w-16"></div>
+            <h3 class="font-pricedown text-2xl text-cyan-100">Monde ouvert</h3>
+            <p class="mt-3 text-slate-300 leading-relaxed">Une ville vivante avec des quartiers dynamiques, une hiérarchie sociale crédible et des scènes RP qui prennent vie au fil des journées.</p>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-black/40 p-6 backdrop-blur transition duration-300 hover:border-emerald-400/35 hover:bg-black/55 hover:shadow-[0_0_28px_rgba(52,211,153,0.12)]">
+            <div class="mb-4 h-1 w-10 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-200/40 transition-all duration-300 group-hover:w-16"></div>
+            <h3 class="font-pricedown text-2xl text-emerald-100">Carrières variées</h3>
+            <p class="mt-3 text-slate-300 leading-relaxed">Policier, médecin, avocat, entrepreneur, criminel ou figure publique — construis le parcours qui correspond à ton personnage.</p>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-black/40 p-6 backdrop-blur transition duration-300 hover:border-amber-400/35 hover:bg-black/55 hover:shadow-[0_0_28px_rgba(251,191,36,0.12)]">
+            <div class="mb-4 h-1 w-10 rounded-full bg-gradient-to-r from-amber-400 to-amber-200/40 transition-all duration-300 group-hover:w-16"></div>
+            <h3 class="font-pricedown text-2xl text-amber-100">Économie vivante</h3>
+            <p class="mt-3 text-slate-300 leading-relaxed">Gère ton business, investis, fais fortune ou bascule dans l'illégalité — chaque dollar et chaque décision comptent.</p>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-black/40 p-6 backdrop-blur transition duration-300 hover:border-rose-400/35 hover:bg-black/55 hover:shadow-[0_0_28px_rgba(244,63,94,0.12)]">
+            <div class="mb-4 h-1 w-10 rounded-full bg-gradient-to-r from-rose-400 to-rose-200/40 transition-all duration-300 group-hover:w-16"></div>
+            <h3 class="font-pricedown text-2xl text-rose-100">Actions poussées</h3>
+            <p class="mt-3 text-slate-300 leading-relaxed">Drogues, braquages, gangs, forces de l'ordre structurées — des systèmes pensés pour des scènes intenses et cohérentes.</p>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-black/40 p-6 backdrop-blur transition duration-300 hover:border-violet-400/35 hover:bg-black/55 hover:shadow-[0_0_28px_rgba(167,139,250,0.12)]">
+            <div class="mb-4 h-1 w-10 rounded-full bg-gradient-to-r from-violet-400 to-violet-200/40 transition-all duration-300 group-hover:w-16"></div>
+            <h3 class="font-pricedown text-2xl text-violet-100">Staff à l'écoute</h3>
+            <p class="mt-3 text-slate-300 leading-relaxed">Une équipe active pour garantir un roleplay fluide, équilibré et respectueux des règles du serveur.</p>
+          </article>
+          <article class="group rounded-2xl border border-white/10 bg-black/40 p-6 backdrop-blur transition duration-300 hover:border-cyan-400/35 hover:bg-black/55 hover:shadow-[0_0_28px_rgba(34,211,238,0.12)]">
+            <div class="mb-4 h-1 w-10 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-200/40 transition-all duration-300 group-hover:w-16"></div>
+            <h3 class="font-pricedown text-2xl text-cyan-100">Communauté soudée</h3>
+            <p class="mt-3 text-slate-300 leading-relaxed">Fair-play, qualité de RP et respect mutuel — le cœur de l'expérience Rise FA.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -105,15 +130,36 @@
 
     <section class="reveal px-6 py-20">
       <div class="mx-auto max-w-[1400px]">
-        <h2 class="font-pricedown text-5xl text-center mb-10 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Système économique réaliste</h2>
-        <div class="mx-auto max-w-4xl rounded-3xl border border-white/15 bg-black/40 p-10 backdrop-blur text-center">
-          <div class="text-6xl mb-4">💰</div>
-          <p class="text-slate-300 text-lg leading-relaxed">
-            Notre économie est soigneusement équilibrée pour offrir une progression naturelle et gratifiante.
-            Commencez avec des petits boulots, épargnez, investissez et développez votre empire. Chaque dollar compte
-            et chaque décision a son importance. Les prix sont ajustés régulièrement pour maintenir un équilibre parfait
-            entre les différentes activités légales et illégales.
-          </p>
+        <h2 class="font-pricedown text-5xl text-center mb-4 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Système économique réaliste</h2>
+        <p class="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">Une progression naturelle, un équilibre constant entre légal et illégal.</p>
+
+        <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div class="rounded-3xl border border-white/15 bg-black/40 p-8 sm:p-10 backdrop-blur">
+            <p class="text-slate-300 text-lg leading-relaxed">
+              Notre économie est soigneusement équilibrée pour offrir une progression naturelle et gratifiante.
+              Commencez avec des petits boulots, épargnez, investissez et développez votre empire. Chaque dollar compte
+              et chaque décision a son importance.
+            </p>
+            <p class="mt-5 text-slate-400 leading-relaxed">
+              Les prix sont ajustés régulièrement pour maintenir un équilibre parfait entre les activités légales et illégales,
+              afin que chaque parcours — honnête ou criminel — reste viable et stimulant.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            <div class="rounded-2xl border border-cyan-400/20 bg-cyan-500/5 px-6 py-5 backdrop-blur">
+              <p class="text-xs uppercase tracking-[0.2em] text-cyan-300/80">Progression</p>
+              <p class="mt-2 font-pricedown text-3xl text-white">Du débutant au patron</p>
+            </div>
+            <div class="rounded-2xl border border-emerald-400/20 bg-emerald-500/5 px-6 py-5 backdrop-blur">
+              <p class="text-xs uppercase tracking-[0.2em] text-emerald-300/80">Équilibre</p>
+              <p class="mt-2 font-pricedown text-3xl text-white">Légal & illégal</p>
+            </div>
+            <div class="rounded-2xl border border-amber-400/20 bg-amber-500/5 px-6 py-5 backdrop-blur sm:col-span-3 lg:col-span-1">
+              <p class="text-xs uppercase tracking-[0.2em] text-amber-300/80">Impact</p>
+              <p class="mt-2 font-pricedown text-3xl text-white">Chaque décision</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -133,43 +179,11 @@
 
     <section class="reveal px-6 py-16 border-t border-white/15 bg-white/5">
       <div class="mx-auto max-w-[1400px] grid gap-8 md:grid-cols-3 text-center">
-        <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">{{ config('rise.server.slots') }}</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Slots disponibles</p></div>
+        <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">2046</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Slots disponibles</p></div>
         <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">24/7</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Support en ligne</p></div>
         <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">100%</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Roleplay immersif</p></div>
       </div>
     </section>
+  
 </main>
 @endsection
-
-@push('scripts')
-<script>
-  document.getElementById("server-ip")?.addEventListener("click", () => {
-    const val = document.getElementById("server-ip")?.dataset.connect ?? "";
-    navigator.clipboard.writeText(val).then(() => {
-      const el = document.getElementById("server-ip");
-      if (!el) return;
-      const prev = el.textContent;
-      el.textContent = "Copié !";
-      setTimeout(() => { el.textContent = prev; }, 1500);
-    });
-  });
-
-  const reveals = document.querySelectorAll(".reveal");
-  reveals.forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(28px)";
-    el.style.transition = "opacity 650ms ease, transform 650ms ease";
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -80px 0px" });
-
-  reveals.forEach((el) => observer.observe(el));
-</script>
-@endpush

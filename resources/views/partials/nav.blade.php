@@ -53,7 +53,7 @@
             </div>
           </div>
         </li>
-        <li><a href="{{ route('shop.index') }}" @if(request()->routeIs('shop.*')) aria-current="page" @endif class="{{ request()->routeIs('shop.*') ? 'text-white pointer-events-none' : 'text-white/60 hover:text-white transition' }}">Shop</a></li>
+        <li><a href="{{ route('shop.index') }}" @if(request()->routeIs('shop.*')) aria-current="page" @endif class="{{ request()->routeIs('shop.*') ? 'text-white pointer-events-none' : 'text-white/60 hover:text-white transition' }}">Boutique</a></li>
         @if (isset($player) && $player->isLoggedIn())
           <li><a href="{{ route('account.show') }}" class="{{ $navLink('account.show') }}">Compte</a></li>
         @endif
@@ -77,7 +77,7 @@
         <a href="{{ route('metiers-legaux') }}" class="block rounded-lg px-3 py-2 text-riseCyan {{ request()->routeIs('metiers-legaux') ? 'bg-white/10 pointer-events-none' : 'hover:bg-white/5' }}">Métiers légaux</a>
         <a href="{{ route('organisations-criminelles') }}" class="mt-1 block rounded-lg px-3 py-2 text-riseRose {{ request()->routeIs('organisations-criminelles') ? 'bg-white/10 pointer-events-none' : 'hover:bg-white/5' }}">Organisations criminelles</a>
       </li>
-      <li><a href="{{ route('shop.index') }}" class="{{ $navLinkMobile('shop.index') }}">Shop</a></li>
+      <li><a href="{{ route('shop.index') }}" class="{{ $navLinkMobile('shop.index') }}">Boutique</a></li>
       @if (isset($player) && $player->isLoggedIn())
         <li><a href="{{ route('account.show') }}" class="{{ $navLinkMobile('account.show') }}">Compte</a></li>
       @endif

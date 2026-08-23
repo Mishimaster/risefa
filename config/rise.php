@@ -20,9 +20,17 @@ return [
         'private_key' => env('TEBEX_PRIVATE_KEY'),
     ],
 
+    'seo' => [
+        'site_name' => 'Rise FA',
+        'keywords' => 'Rise FA, risefa, serveur RP, roleplay GTA 5, GTA V RP, FiveM, serveur français, GTA RP, Los Santos RP',
+        'default_description' => 'Rise FA — serveur roleplay GTA 5 sur FiveM. Rejoignez une communauté immersive, découvrez nos métiers, organisations et la boutique officielle.',
+        'og_image' => 'images/logorisefa.png',
+    ],
+
     'pages' => [
         'home' => [
-            'title' => 'Rise - Accueil',
+            'title' => 'Rise FA | Serveur RP GTA 5 FiveM — Accueil',
+            'description' => 'Serveur roleplay GTA 5 FiveM francophone. Rejoignez Rise FA : immersion, économie RP, métiers légaux, organisations et une communauté active sur Los Santos.',
             'logo' => 'logorisefa.png',
             'logo_alt' => 'Rise FA Logo',
             'logo_glow' => 'nav-logo-glow-cyan',
@@ -30,7 +38,8 @@ return [
             'stars' => '',
         ],
         'faq' => [
-            'title' => 'Rise - FAQ',
+            'title' => 'FAQ | Rise FA — Serveur RP GTA 5 FiveM',
+            'description' => 'Questions fréquentes sur Rise FA : règles, installation FiveM, connexion au serveur, roleplay GTA 5 et informations pour les nouveaux joueurs.',
             'logo' => 'logofaq.png',
             'logo_alt' => 'Rise FAQ',
             'logo_glow' => 'nav-logo-glow-faq',
@@ -38,15 +47,17 @@ return [
             'stars' => 'page-stars-purple',
         ],
         'shop' => [
-            'title' => 'Rise - Shop',
+            'title' => 'Boutique | Rise FA — Serveur RP GTA 5 FiveM',
+            'description' => 'Boutique officielle Rise FA. Achetez vos packs sur le serveur roleplay GTA 5 FiveM via Tebex — paiement sécurisé, livraison en jeu.',
             'logo' => 'logoshop.png',
-            'logo_alt' => 'Rise Shop',
+            'logo_alt' => 'Rise Boutique',
             'logo_glow' => 'nav-logo-glow-shop',
             'gradient' => 'from-[#050a0c] via-[#0a2228] to-[#050d12]',
             'stars' => 'page-stars-teal',
         ],
         'metiers-legaux' => [
-            'title' => 'Rise - Métiers légaux',
+            'title' => 'Métiers légaux | Rise FA — Serveur RP GTA 5',
+            'description' => 'Découvrez les métiers légaux sur Rise FA : EMS, LSPD, entreprises et jobs civils sur notre serveur roleplay GTA 5 FiveM.',
             'logo' => 'logodiscordlegal.png',
             'logo_alt' => 'Rise FA Logo',
             'logo_glow' => 'nav-logo-glow-emerald',
@@ -54,7 +65,8 @@ return [
             'stars' => 'page-stars-emerald',
         ],
         'organisations-criminelles' => [
-            'title' => 'Rise - Organisations criminelles',
+            'title' => 'Organisations criminelles | Rise FA — GTA 5 RP',
+            'description' => 'Organisations criminelles et illégales sur Rise FA : gangs, trafics et scènes RP sur notre serveur GTA 5 FiveM francophone.',
             'logo' => 'logodiscordillegal.png',
             'logo_alt' => 'Rise FA Logo',
             'logo_glow' => 'nav-logo-glow-rose',
@@ -62,7 +74,8 @@ return [
             'stars' => 'page-stars-rose',
         ],
         'account' => [
-            'title' => 'Rise - Mon compte',
+            'title' => 'Mon compte | Rise FA — Serveur RP GTA 5',
+            'description' => 'Espace joueur Rise FA : consultez votre wallet RP, votre personnage ESX et votre session connectée au serveur roleplay GTA 5 FiveM.',
             'logo' => 'logorisefa.png',
             'logo_alt' => 'Rise FA Logo',
             'logo_glow' => 'nav-logo-glow-cyan',

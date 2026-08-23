@@ -10,19 +10,22 @@ local function getLicense(source)
     return nil
 end
 
-RegisterCommand('site', function(source)
-    if source == 0 then return end
+--- Ouvre le site avec un lien signé (shop, compte, etc.)
+local function openSiteForPlayer(source)
+    if source == 0 then
+        return false
+    end
 
     if AUTH_SECRET == '' then
         print('[rise-web] Configure rise_web_secret dans server.cfg')
         TriggerClientEvent('chat:addMessage', source, { args = { '^1Rise', 'Site web non configuré.' } })
-        return
+        return false
     end
 
     local license = getLicense(source)
     if not license then
         TriggerClientEvent('chat:addMessage', source, { args = { '^1Rise', 'License introuvable.' } })
-        return
+        return false
     end
 
     local body = json.encode({
@@ -47,4 +50,17 @@ RegisterCommand('site', function(source)
         ['Content-Type'] = 'application/json',
         ['X-Rise-Secret'] = AUTH_SECRET,
     })
+
+    return true
+end
+
+RegisterCommand('site', function(source)
+    openSiteForPlayer(source)
 end, false)
+
+-- Bouton menu / touche / autre ressource → même logique que /site
+RegisterNetEvent('rise-web:openSite', function()
+    openSiteForPlayer(source)
+end)
+
+exports('openSite', openSiteForPlayer)

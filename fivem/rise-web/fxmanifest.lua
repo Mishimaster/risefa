@@ -4,7 +4,15 @@ game 'gta5'
 name 'rise-web'
 description 'Lien in-game vers risefa.fr avec token signé'
 author 'Rise FA'
-version '1.1.0'
+version '1.2.0'
+
+server_exports {
+    'openSite',
+}
+
+client_exports {
+    'openSite',
+}
 
 ui_page 'html/open.html'
 

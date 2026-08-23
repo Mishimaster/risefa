@@ -68,7 +68,7 @@
 
       <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         @if ($player->isOnlineVerified())
-          <a href="{{ route('shop.index') }}" class="rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-6 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/35">Aller au shop</a>
+          <a href="{{ route('shop.index') }}" class="rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-6 py-2.5 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-500/35">Aller à la boutique</a>
         @endif
         <form method="POST" action="{{ route('logout') }}">
           @csrf

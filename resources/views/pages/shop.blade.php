@@ -3,15 +3,20 @@
 @section('content')
 <main class="flex-1 w-full px-6 pt-36 pb-16">
   <div class="mx-auto max-w-[1400px]">
-    <div class="mb-10 rounded-[2.5rem] border border-cyan-300/20 bg-black/40 p-8 sm:p-10 backdrop-blur shadow-[0_0_50px_rgba(51,153,255,0.18)]">
-      <h1 class="font-pricedown text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Shop</h1>
-      <p class="mt-3 max-w-2xl text-lg text-slate-300">
-        @if ($tebexConfigured)
-          Boutique officielle Rise — paiement sécurisé via Tebex.
-        @else
+    <div class="relative mb-10 rounded-[2.5rem] border border-cyan-300/20 bg-black/40 p-8 sm:p-10 pb-12 backdrop-blur shadow-[0_0_50px_rgba(51,153,255,0.18)]">
+      <h1 class="font-pricedown text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Boutique</h1>
+      @if ($tebexConfigured)
+        <p class="mt-3 max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed">
+          Achetez vos packs, véhicules et avantages exclusifs pour votre personnage — livrés directement sur le serveur Rise FA.
+        </p>
+      @elseif (! $tebexConfigured)
+        <p class="mt-3 max-w-2xl text-lg text-slate-300">
           Configurez <code class="text-cyan-300/80">TEBEX_PUBLIC_TOKEN</code> dans le fichier <code class="text-cyan-300/80">.env</code>.
-        @endif
-      </p>
+        </p>
+      @endif
+      @if ($tebexConfigured)
+        <p class="absolute bottom-5 right-6 sm:right-10 text-[0.68rem] sm:text-xs text-slate-500 tracking-wide">Paiement sécurisé via Tebex</p>
+      @endif
     </div>
 
     @include('partials.player-status', [

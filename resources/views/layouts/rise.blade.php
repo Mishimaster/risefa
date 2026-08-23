@@ -4,7 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-  <title>{{ $theme['title'] ?? 'Rise' }}</title>
+  @php
+    $seoTitle = $theme['title'] ?? config('rise.seo.site_name').' | Serveur RP GTA 5 FiveM';
+    $seoDescription = $theme['description'] ?? config('rise.seo.default_description');
+    $seoKeywords = config('rise.seo.keywords');
+    $seoSiteName = config('rise.seo.site_name');
+    $seoCanonical = url()->current();
+    $seoOgImage = asset(config('rise.seo.og_image'));
+  @endphp
+  <title>{{ $seoTitle }}</title>
+  <meta name="description" content="{{ $seoDescription }}" />
+  <meta name="keywords" content="{{ $seoKeywords }}" />
+  <meta name="author" content="{{ $seoSiteName }}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="{{ $seoCanonical }}" />
+  <link rel="icon" href="{{ asset('images/favicon.ico') }}" sizes="any" />
+  <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ $seoSiteName }}" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="{{ $seoTitle }}" />
+  <meta property="og:description" content="{{ $seoDescription }}" />
+  <meta property="og:url" content="{{ $seoCanonical }}" />
+  <meta property="og:image" content="{{ $seoOgImage }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ $seoTitle }}" />
+  <meta name="twitter:description" content="{{ $seoDescription }}" />
+  <meta name="twitter:image" content="{{ $seoOgImage }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
