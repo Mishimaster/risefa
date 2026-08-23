@@ -1,0 +1,15 @@
+# Rise Web — ressource FiveM (copier dans server.cfg)
+#
+# rise_web_url     : URL du site Laravel (prod : https://risefa.fr)
+# rise_web_secret  : identique à RISE_GAME_AUTH_SECRET dans le .env du site
+#
+# Installation :
+#   1. Copier le dossier fivem/rise-web vers resources/[local]/rise-web
+#   2. Ajouter les lignes ci-dessous
+#   3. Redémarrer la ressource ou le serveur
+#   4. En jeu : /site → ouvre le navigateur avec un lien signé
+
+set rise_web_url "https://risefa.fr"
+set rise_web_secret "VOTRE_SECRET_IDENTIQUE_AU_.ENV"
+
+ensure rise-web

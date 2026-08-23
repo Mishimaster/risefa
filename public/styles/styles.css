@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Pricedown Bl";
+  src: url("../Pricedown Bl.otf") format("opentype");
+}
+
+h1,
+h2,
+h3,
+header a,
+header button,
+header summary,
+header span {
+  font-family: "Pricedown Bl", "Montserrat", sans-serif !important;
+}
+
+/* État serveur (tooltip + bouton) : Montserrat, pas Pricedown */
+header .server-status-montserrat button,
+header .server-status-montserrat span {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+@keyframes smokeDrift {
+  0% { transform: translateY(0) translateX(0) scale(0.9); opacity: 0; }
+  15% { opacity: .25; }
+  60% { transform: translateY(-140px) translateX(24px) scale(1.3); opacity: .18; }
+  100% { transform: translateY(-280px) translateX(-12px) scale(1.6); opacity: 0; }
+}
+
+.smoke {
+  animation: smokeDrift 14s ease-in-out infinite;
+}
+
+/* Étoiles — index (sous la fumée) : taille inchangée, tons plus lumineux */
+.index-stars-bg {
+  background-image:
+    radial-gradient(2px 2px at 4% 8%, rgba(190, 215, 255, 1), transparent),
+    radial-gradient(2px 2px at 12% 18%, rgba(160, 195, 245, 0.98), transparent),
+    radial-gradient(3px 3px at 22% 6%, rgba(200, 225, 255, 1), transparent),
+    radial-gradient(2px 2px at 31% 24%, rgba(150, 185, 235, 0.96), transparent),
+    radial-gradient(2px 2px at 38% 11%, rgba(170, 200, 248, 1), transparent),
+    radial-gradient(2px 2px at 47% 28%, rgba(165, 198, 245, 0.98), transparent),
+    radial-gradient(4px 4px at 55% 9%, rgba(210, 232, 255, 1), transparent),
+    radial-gradient(2px 2px at 63% 21%, rgba(145, 180, 235, 0.95), transparent),
+    radial-gradient(2px 2px at 71% 14%, rgba(185, 210, 252, 1), transparent),
+    radial-gradient(2px 2px at 78% 27%, rgba(155, 190, 240, 0.96), transparent),
+    radial-gradient(3px 3px at 86% 7%, rgba(195, 220, 255, 1), transparent),
+    radial-gradient(2px 2px at 93% 19%, rgba(148, 185, 238, 0.97), transparent),
+    radial-gradient(2px 2px at 8% 42%, rgba(175, 205, 250, 1), transparent),
+    radial-gradient(2px 2px at 17% 55%, rgba(155, 190, 240, 0.96), transparent),
+    radial-gradient(2px 2px at 26% 38%, rgba(195, 218, 255, 1), transparent),
+    radial-gradient(3px 3px at 35% 48%, rgba(165, 198, 248, 0.98), transparent),
+    radial-gradient(2px 2px at 44% 62%, rgba(140, 178, 230, 0.94), transparent),
+    radial-gradient(2px 2px at 52% 41%, rgba(175, 205, 250, 1), transparent),
+    radial-gradient(2px 2px at 61% 54%, rgba(180, 208, 252, 0.99), transparent),
+    radial-gradient(4px 4px at 69% 36%, rgba(205, 228, 255, 1), transparent),
+    radial-gradient(2px 2px at 77% 58%, rgba(135, 175, 228, 0.94), transparent),
+    radial-gradient(2px 2px at 84% 44%, rgba(185, 212, 252, 1), transparent),
+    radial-gradient(2px 2px at 91% 51%, rgba(160, 195, 245, 0.98), transparent),
+    radial-gradient(2px 2px at 6% 72%, rgba(168, 200, 248, 0.98), transparent),
+    radial-gradient(3px 3px at 15% 68%, rgba(200, 225, 255, 1), transparent),
+    radial-gradient(2px 2px at 24% 81%, rgba(150, 188, 235, 0.95), transparent),
+    radial-gradient(2px 2px at 33% 74%, rgba(178, 208, 252, 1), transparent),
+    radial-gradient(2px 2px at 41% 88%, rgba(158, 195, 242, 0.98), transparent),
+    radial-gradient(2px 2px at 50% 71%, rgba(148, 188, 235, 0.95), transparent),
+    radial-gradient(4px 4px at 58% 84%, rgba(205, 228, 255, 1), transparent),
+    radial-gradient(2px 2px at 66% 76%, rgba(165, 200, 248, 0.98), transparent),
+    radial-gradient(2px 2px at 74% 91%, rgba(145, 182, 235, 0.95), transparent),
+    radial-gradient(2px 2px at 82% 69%, rgba(190, 218, 255, 1), transparent),
+    radial-gradient(2px 2px at 90% 78%, rgba(140, 180, 232, 0.94), transparent),
+    radial-gradient(2px 2px at 96% 66%, rgba(168, 200, 248, 1), transparent),
+    radial-gradient(2px 2px at 11% 94%, rgba(160, 195, 245, 0.98), transparent),
+    radial-gradient(3px 3px at 28% 96%, rgba(200, 225, 255, 1), transparent),
+    radial-gradient(2px 2px at 46% 98%, rgba(152, 190, 240, 0.96), transparent),
+    radial-gradient(2px 2px at 64% 95%, rgba(178, 208, 252, 1), transparent),
+    radial-gradient(2px 2px at 81% 93%, rgba(158, 195, 242, 0.98), transparent);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: indexStarsTwinkle 7s ease-in-out infinite;
+}
+
+@keyframes indexStarsTwinkle {
+  0%, 100% { opacity: 0.94; }
+  50% { opacity: 1; }
+}
+
+/* Fond fumée image — utilisé sur index.html uniquement */
+.index-smoke-bg {
+  background-image: url("smoke.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Teinte des étoiles selon la page (pour garder l'ambiance couleur) */
+.page-stars-emerald {
+  filter: hue-rotate(-70deg) saturate(1.65) brightness(1.05);
+}
+
+.page-stars-purple {
+  filter: hue-rotate(65deg) saturate(1.8) brightness(1.05);
+}
+
+.page-stars-rose {
+  filter: hue-rotate(140deg) saturate(1.6) brightness(1.05);
+}
+
+/* Shop — étoiles teintées teal / cyan (aligné logoshop) */
+.page-stars-teal {
+  filter: hue-rotate(-32deg) saturate(1.45) brightness(1.08);
+}
+
+/* Halo navbar (double drop-shadow CSS natif — le CDN Tailwind ne gère pas toujours les virgules dans drop-shadow-[…]) */
+header a img.nav-logo-glow-cyan,
+header img.nav-logo-glow-cyan {
+  filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.85)) drop-shadow(0 0 34px rgba(6, 182, 212, 0.4));
+}
+header a img.nav-logo-glow-faq,
+header img.nav-logo-glow-faq {
+  filter: drop-shadow(0 0 18px rgba(192, 132, 252, 0.8)) drop-shadow(0 0 34px rgba(168, 85, 247, 0.45));
+}
+header a img.nav-logo-glow-shop,
+header img.nav-logo-glow-shop {
+  filter: drop-shadow(0 0 18px rgba(45, 212, 191, 0.85)) drop-shadow(0 0 36px rgba(6, 182, 212, 0.45));
+}
+header a img.nav-logo-glow-emerald,
+header img.nav-logo-glow-emerald {
+  filter: drop-shadow(0 0 18px rgba(52, 211, 153, 0.8)) drop-shadow(0 0 32px rgba(16, 185, 129, 0.4));
+}
+header a img.nav-logo-glow-rose,
+header img.nav-logo-glow-rose {
+  filter: drop-shadow(0 0 18px rgba(251, 113, 133, 0.85)) drop-shadow(0 0 34px rgba(244, 63, 94, 0.4));
+}

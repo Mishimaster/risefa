@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Rise Web</title>
+</head>
+<body>
+<script>
+    window.addEventListener('message', (event) => {
+        const data = event.data;
+        if (!data || data.action !== 'openUrl' || typeof data.url !== 'string') {
+            return;
+        }
+        window.invokeNative('openUrl', data.url);
+    });
+</script>
+</body>
+</html>

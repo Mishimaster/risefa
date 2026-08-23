@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rise - FAQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: { riseBlue: "#3399ff", riseCyan: "#67e8f9", riseRose: "#fda4af", risePurple: "#a855f7" },
+          fontFamily: { sans: ["Montserrat", "sans-serif"], pricedown: ["Pricedown Bl", "Montserrat", "sans-serif"] }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body class="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans overflow-x-hidden">
+  <!-- Fond : dégradé (couleur page) → étoiles → fumée -->
+  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-[#0a0a0a] via-[#1a1225] to-[#0a0a0a]" aria-hidden="true"></div>
+  <div class="index-stars-bg fixed inset-0 -z-10 pointer-events-none page-stars-purple" aria-hidden="true"></div>
+  <div class="index-smoke-bg fixed inset-0 -z-10 pointer-events-none opacity-[0.15]" aria-hidden="true"></div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-cyan-300/20 bg-black/70 backdrop-blur px-[5%] py-4">
+    <nav class="mx-auto flex max-w-[1400px] items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center"><img src="images/logofaq.png" alt="Rise FAQ" class="nav-logo-glow-faq h-20 w-auto object-contain" /></a>
+      <div class="server-status-montserrat group relative hidden md:block">
+        <button
+          type="button"
+          class="relative flex cursor-help items-center justify-center rounded-full border border-emerald-400/25 bg-emerald-500/10 p-2 shadow-[0_0_20px_rgba(16,185,129,0.15)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60"
+          aria-label="État du serveur !"
+        >
+          <span class="relative flex h-3.5 w-3.5 shrink-0" aria-hidden="true">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40"></span>
+            <span class="relative inline-flex h-3.5 w-3.5 rounded-full bg-gradient-to-b from-emerald-300 to-emerald-600 shadow-[0_0_12px_rgba(52,211,153,0.95)] ring-2 ring-emerald-400/50"></span>
+          </span>
+        </button>
+        <span
+          role="tooltip"
+          class="pointer-events-none absolute left-1/2 top-full z-[60] mt-2 -translate-x-1/2 whitespace-nowrap rounded-lg border border-emerald-400/25 bg-black/95 px-3 py-1.5 text-xs font-semibold tracking-wide text-emerald-100 shadow-[0_0_24px_rgba(16,185,129,0.35)] backdrop-blur opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
+        >
+          État du serveur !
+        </span>
+      </div>
+      <ul class="ml-auto hidden md:flex items-center gap-8 text-[1.125rem] font-medium font-pricedown">
+        <li><a href="index.html" class="text-white/60 hover:text-white transition">Accueil</a></li>
+        <li><a href="faq.html" aria-current="page" class="text-white pointer-events-none">FAQ</a></li>
+        <li class="relative group">
+          <button class="text-white/60 hover:text-white transition">En jeu</button>
+          <div class="absolute left-0 top-full hidden pt-2 group-hover:block group-focus-within:block">
+            <div class="min-w-64 rounded-xl border border-white/10 bg-black/80 p-2 shadow-[0_0_35px_rgba(51,153,255,0.18)] backdrop-blur">
+              <a href="metiers-legaux.html" class="block rounded-lg px-3 py-2 text-riseCyan hover:bg-white/5">Métiers légaux</a>
+              <a href="organisations-criminelles.html" class="mt-1 block rounded-lg px-3 py-2 text-riseRose hover:bg-white/5">Organisations criminelles</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="shop.html" class="text-white/60 hover:text-white transition">Shop</a></li>
+      </ul>
+      <button id="menu-button" class="ml-auto md:ml-0 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-[1.125rem] font-pricedown text-white/90 md:hidden">Menu</button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden mt-3 border-t border-white/10 pt-3">
+      <ul class="flex flex-col gap-2 text-[1.125rem] font-medium font-pricedown">
+        <li><a href="index.html" class="block rounded-lg px-3 py-2 text-white/70 hover:bg-white/10">Accueil</a></li>
+        <li><a href="faq.html" aria-current="page" class="block rounded-lg px-3 py-2 text-white bg-white/10 pointer-events-none">FAQ</a></li>
+        <li class="rounded-lg border border-white/10 bg-black/60 p-2">
+          <p class="px-2 pb-2 text-white/70">En jeu</p>
+          <a href="metiers-legaux.html" class="block rounded-lg px-3 py-2 text-riseCyan hover:bg-white/5">Métiers légaux</a>
+          <a href="organisations-criminelles.html" class="mt-1 block rounded-lg px-3 py-2 text-riseRose hover:bg-white/5">Organisations criminelles</a>
+        </li>
+        <li><a href="shop.html" class="block rounded-lg px-3 py-2 text-white/70 hover:bg-white/10">Shop</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full px-6 pt-36 pb-16">
+    <section class="mx-auto max-w-[1400px]">
+      <div class="pointer-events-none absolute left-[12%] top-[44%] h-64 w-64 rounded-full bg-purple-300/15 blur-[85px] smoke"></div>
+      <div class="pointer-events-none absolute left-[20%] top-[46%] h-72 w-72 rounded-full bg-fuchsia-300/15 blur-[95px] smoke [animation-delay:2s]"></div>
+      <div class="w-full rounded-[2.5rem] border border-purple-300/20 bg-black/40 p-8 sm:p-10 backdrop-blur shadow-[0_0_50px_rgba(168,85,247,0.2)]">
+        <h1 class="font-pricedown text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">FAQ</h1>
+        <p class="mt-3 text-lg sm:text-xl text-slate-300">Questions fréquentes - Trouvez toutes les réponses à vos questions.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-6 max-w-[1400px]">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <button data-filter="all" class="faq-filter rounded-2xl border border-purple-300/30 bg-purple-400/20 px-4 py-3 text-base font-semibold">Toutes</button>
+        <button data-filter="general" class="faq-filter rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-base font-semibold text-white/80 hover:bg-white/10">Général</button>
+        <button data-filter="technique" class="faq-filter rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-base font-semibold text-white/80 hover:bg-white/10">Technique</button>
+        <button data-filter="gameplay" class="faq-filter rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-base font-semibold text-white/80 hover:bg-white/10">Gameplay</button>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-6 max-w-[1400px] space-y-4" id="faq-list">
+      <details class="faq-item rounded-2xl border border-purple-300/20 bg-black/40 backdrop-blur p-5" data-category="general">
+        <summary class="cursor-pointer font-semibold text-lg">Comment rejoindre le serveur ?</summary>
+        <p class="mt-3 text-slate-300">Rejoignez le Discord principal puis suivez le guide de whitelist.</p>
+      </details>
+      <details class="faq-item rounded-2xl border border-purple-300/20 bg-black/40 backdrop-blur p-5" data-category="technique">
+        <summary class="cursor-pointer font-semibold text-lg">Quels prérequis techniques ?</summary>
+        <p class="mt-3 text-slate-300">FiveM à jour, GTA V original, micro recommandé et connexion stable.</p>
+      </details>
+      <details class="faq-item rounded-2xl border border-purple-300/20 bg-black/40 backdrop-blur p-5" data-category="gameplay">
+        <summary class="cursor-pointer font-semibold text-lg">Le serveur est-il sérieux RP ?</summary>
+        <p class="mt-3 text-slate-300">Oui, priorité à l'immersion, au respect des scènes et à la cohérence RP.</p>
+      </details>
+      <details class="faq-item rounded-2xl border border-purple-300/20 bg-black/40 backdrop-blur p-5" data-category="general">
+        <summary class="cursor-pointer font-semibold text-lg">Y a-t-il des métiers légaux et illégaux ?</summary>
+        <p class="mt-3 text-slate-300">Oui, consultez les pages dédiées depuis le menu En jeu.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="mt-auto flex-shrink-0 px-6 py-10 border-t border-white/15 bg-white/5">
+    <div class="mx-auto max-w-[1400px] text-center text-slate-300">&copy; 2025 Rise - Tous droits réservés</div>
+  </footer>
+
+  <script>
+    document.getElementById("menu-button")?.addEventListener("click", () => {
+      document.getElementById("mobile-menu")?.classList.toggle("hidden");
+    });
+
+    const filters = document.querySelectorAll(".faq-filter");
+    const items = document.querySelectorAll(".faq-item");
+    const activeClasses = ["border-purple-300/30", "bg-purple-400/20", "text-white"];
+    const inactiveClasses = ["border-white/15", "bg-white/5", "text-white/80"];
+
+    filters.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filters.forEach((b) => {
+          b.classList.remove(...activeClasses);
+          b.classList.add(...inactiveClasses);
+        });
+        btn.classList.remove(...inactiveClasses);
+        btn.classList.add(...activeClasses);
+
+        const category = btn.dataset.filter;
+        items.forEach((item) => {
+          const show = category === "all" || item.dataset.category === category;
+          item.classList.toggle("hidden", !show);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

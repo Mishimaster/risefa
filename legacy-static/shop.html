@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rise - Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            riseBlue: "#3399ff",
+            riseCyan: "#67e8f9",
+            riseRose: "#fda4af"
+          },
+          fontFamily: {
+            sans: ["Montserrat", "sans-serif"],
+            pricedown: ["Pricedown Bl", "Montserrat", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body class="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans overflow-x-hidden">
+  <div class="fixed inset-0 -z-10 bg-gradient-to-br from-[#050a0c] via-[#0a2228] to-[#050d12]" aria-hidden="true"></div>
+  <div class="index-stars-bg fixed inset-0 -z-10 pointer-events-none page-stars-teal" aria-hidden="true"></div>
+  <div class="index-smoke-bg fixed inset-0 -z-10 pointer-events-none opacity-[0.15]" aria-hidden="true"></div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-cyan-300/20 bg-black/70 backdrop-blur px-[5%] py-4">
+    <nav class="mx-auto flex max-w-[1400px] items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logoshop.png" alt="Rise Shop" class="nav-logo-glow-shop h-20 w-auto object-contain" />
+      </a>
+      <div class="server-status-montserrat group relative hidden md:block">
+        <button
+          type="button"
+          class="relative flex cursor-help items-center justify-center rounded-full border border-emerald-400/25 bg-emerald-500/10 p-2 shadow-[0_0_20px_rgba(16,185,129,0.15)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60"
+          aria-label="État du serveur !"
+        >
+          <span class="relative flex h-3.5 w-3.5 shrink-0" aria-hidden="true">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40"></span>
+            <span class="relative inline-flex h-3.5 w-3.5 rounded-full bg-gradient-to-b from-emerald-300 to-emerald-600 shadow-[0_0_12px_rgba(52,211,153,0.95)] ring-2 ring-emerald-400/50"></span>
+          </span>
+        </button>
+        <span
+          role="tooltip"
+          class="pointer-events-none absolute left-1/2 top-full z-[60] mt-2 -translate-x-1/2 whitespace-nowrap rounded-lg border border-emerald-400/25 bg-black/95 px-3 py-1.5 text-xs font-semibold tracking-wide text-emerald-100 shadow-[0_0_24px_rgba(16,185,129,0.35)] backdrop-blur opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
+        >
+          État du serveur !
+        </span>
+      </div>
+      <ul class="ml-auto hidden md:flex items-center gap-8 text-[1.125rem] font-medium font-pricedown">
+        <li><a href="index.html" class="text-white/60 hover:text-white transition">Accueil</a></li>
+        <li><a href="faq.html" class="text-white/60 hover:text-white transition">FAQ</a></li>
+        <li class="relative group">
+          <button type="button" class="text-white/60 hover:text-white transition">En jeu</button>
+          <div class="absolute left-0 top-full hidden pt-2 group-hover:block group-focus-within:block">
+            <div class="min-w-64 rounded-xl border border-white/10 bg-black/80 p-2 shadow-[0_0_35px_rgba(51,153,255,0.18)] backdrop-blur">
+              <a href="metiers-legaux.html" class="block rounded-lg px-3 py-2 text-riseCyan hover:bg-white/5">Métiers légaux</a>
+              <a href="organisations-criminelles.html" class="mt-1 block rounded-lg px-3 py-2 text-riseRose hover:bg-white/5">Organisations criminelles</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="shop.html" aria-current="page" class="text-white pointer-events-none">Shop</a></li>
+      </ul>
+      <button id="menu-button" type="button" class="ml-auto md:ml-0 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-[1.125rem] font-pricedown text-white/90 md:hidden">Menu</button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden mt-3 border-t border-white/10 pt-3">
+      <ul class="flex flex-col gap-2 text-[1.125rem] font-medium font-pricedown">
+        <li><a href="index.html" class="block rounded-lg px-3 py-2 text-white/70 hover:bg-white/10">Accueil</a></li>
+        <li><a href="faq.html" class="block rounded-lg px-3 py-2 text-white/70 hover:bg-white/10">FAQ</a></li>
+        <li class="rounded-lg border border-white/10 bg-black/60 p-2">
+          <p class="px-2 pb-2 text-white/70">En jeu</p>
+          <a href="metiers-legaux.html" class="block rounded-lg px-3 py-2 text-riseCyan hover:bg-white/5">Métiers légaux</a>
+          <a href="organisations-criminelles.html" class="mt-1 block rounded-lg px-3 py-2 text-riseRose hover:bg-white/5">Organisations criminelles</a>
+        </li>
+        <li><a href="shop.html" aria-current="page" class="block rounded-lg px-3 py-2 text-white bg-white/10 pointer-events-none">Shop</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full px-6 pt-36 pb-16">
+    <div class="mx-auto max-w-[1400px]">
+      <div class="mb-10 rounded-[2.5rem] border border-cyan-300/20 bg-black/40 p-8 sm:p-10 backdrop-blur shadow-[0_0_50px_rgba(51,153,255,0.18)]">
+        <h1 class="font-pricedown text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Shop</h1>
+        <p class="mt-3 max-w-2xl text-lg text-slate-300">Abonnements (packs), recharge de R-Tokens à l'unité et véhicules. Contenu indicatif — branchement boutique à venir.</p>
+      </div>
+
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-start">
+        <aside class="w-full shrink-0 lg:w-64">
+          <nav aria-label="Boutique" class="rounded-2xl border border-cyan-300/20 bg-black/50 p-3 shadow-[0_0_35px_rgba(51,153,255,0.12)] backdrop-blur lg:sticky lg:top-32">
+            <div class="flex flex-col gap-2" role="tablist" aria-orientation="vertical">
+              <button
+                type="button"
+                id="shop-tab-abonnement"
+                role="tab"
+                aria-selected="true"
+                aria-controls="shop-panel-abonnement"
+                data-shop-tab="abonnement"
+                class="shop-tab rounded-xl border border-cyan-400/40 bg-cyan-500/15 px-4 py-3 text-left text-base font-semibold text-white shadow-[0_0_20px_rgba(34,211,238,0.12)] transition"
+              >
+                Abonnement
+              </button>
+              <button
+                type="button"
+                id="shop-tab-rtoken"
+                role="tab"
+                aria-selected="false"
+                aria-controls="shop-panel-rtoken"
+                data-shop-tab="rtoken"
+                class="shop-tab rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-base font-semibold text-white/75 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+              >
+                R-Token
+              </button>
+              <button
+                type="button"
+                id="shop-tab-vehicules"
+                role="tab"
+                aria-selected="false"
+                aria-controls="shop-panel-vehicules"
+                data-shop-tab="vehicules"
+                class="shop-tab rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-base font-semibold text-white/75 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+              >
+                Véhicules
+              </button>
+            </div>
+          </nav>
+        </aside>
+
+        <div class="min-w-0 flex-1">
+          <section
+            id="shop-panel-abonnement"
+            role="tabpanel"
+            aria-labelledby="shop-tab-abonnement"
+            class="shop-panel"
+          >
+            <h2 class="sr-only">Abonnement</h2>
+            <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 xl:items-stretch">
+              <article class="flex flex-col rounded-2xl border-2 border-cyan-400/70 bg-black/50 p-6 backdrop-blur shadow-[0_0_32px_rgba(34,211,238,0.45),0_0_1px_rgba(165,243,252,0.9)_inset]">
+                <h3 class="font-pricedown text-2xl text-cyan-200">Pack Starter</h3>
+                <ul class="mt-8 flex-1 list-disc list-outside space-y-0.5 pl-4 text-sm text-slate-300 marker:text-cyan-400/55">
+                  <li class="leading-snug">150 R-Tokens</li>
+                  <li class="leading-snug">3 500 $</li>
+                  <li class="leading-snug">7 burgers et 7 boissons</li>
+                </ul>
+                <p class="mt-4 text-2xl font-bold text-white">4,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+              <article class="relative z-[1] flex flex-col rounded-2xl border-2 border-cyan-300/80 bg-gradient-to-b from-cyan-500/10 to-black/55 p-6 backdrop-blur shadow-[0_0_40px_rgba(34,211,238,0.52),0_0_1px_rgba(207,250,254,0.95)_inset]">
+                <span class="mb-2 w-fit rounded-full border border-cyan-400/60 bg-cyan-500/18 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-cyan-100 shadow-[0_0_14px_rgba(34,211,238,0.35)]">Populaire</span>
+                <h3 class="font-pricedown text-2xl text-cyan-100">Pack Standard</h3>
+                <ul class="mt-8 flex-1 list-disc list-outside space-y-0.5 pl-4 text-sm text-slate-300 marker:text-cyan-400/55">
+                  <li class="leading-snug">350 R-Tokens</li>
+                  <li class="leading-snug">10 000 $</li>
+                  <li class="leading-snug">30 burgers et 30 boissons</li>
+                </ul>
+                <p class="mt-4 text-2xl font-bold text-white">9,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/55 bg-cyan-500/28 px-4 py-2.5 text-sm font-semibold text-cyan-50 shadow-[0_0_20px_rgba(34,211,238,0.32)] transition hover:bg-cyan-500/36 hover:shadow-[0_0_26px_rgba(34,211,238,0.42)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border-2 border-cyan-400/70 bg-black/50 p-6 backdrop-blur shadow-[0_0_32px_rgba(34,211,238,0.45),0_0_1px_rgba(165,243,252,0.9)_inset] sm:col-span-2 xl:col-span-1">
+                <h3 class="font-pricedown text-2xl text-cyan-200">Pack Premium</h3>
+                <ul class="mt-8 flex-1 list-disc list-outside space-y-0.5 pl-4 text-sm text-slate-300 marker:text-cyan-400/55">
+                  <li class="leading-snug">750 R-Tokens</li>
+                  <li class="leading-snug">35 000 $</li>
+                  <li class="leading-snug">70 burgers et 70 boissons</li>
+                  <li class="leading-snug">PMMS</li>
+                  <li class="leading-snug">1 Véhicule aléatoire</li>
+                </ul>
+                <p class="mt-4 text-2xl font-bold text-white">19,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border-2 border-cyan-400/70 bg-black/50 p-6 backdrop-blur shadow-[0_0_32px_rgba(34,211,238,0.45),0_0_1px_rgba(165,243,252,0.9)_inset]">
+                <h3 class="font-pricedown text-2xl text-cyan-200">Pack Avancé</h3>
+                <ul class="mt-8 flex-1 list-disc list-outside space-y-0.5 pl-4 text-sm text-slate-300 marker:text-cyan-400/55">
+                  <li class="leading-snug">1250 R-Tokens</li>
+                  <li class="leading-snug">50 000 $</li>
+                  <li class="leading-snug">100 burgers et 100 boissons</li>
+                  <li class="leading-snug">PMMS</li>
+                  <li class="leading-snug">1 Véhicule aléatoire</li>
+                  <li class="leading-snug">1 Arme blanche aléatoire</li>
+                </ul>
+                <p class="mt-4 text-2xl font-bold text-white">29,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border-2 border-cyan-400/70 bg-black/50 p-6 backdrop-blur shadow-[0_0_32px_rgba(34,211,238,0.45),0_0_1px_rgba(165,243,252,0.9)_inset]">
+                <h3 class="font-pricedown text-2xl text-cyan-200">Pack Ultime</h3>
+                <ul class="mt-8 flex-1 list-disc list-outside space-y-0.5 pl-4 text-sm text-slate-300 marker:text-cyan-400/55">
+                  <li class="leading-snug">1550 R-Tokens</li>
+                  <li class="leading-snug">75 000 $</li>
+                  <li class="leading-snug">150 burgers et 150 boissons</li>
+                  <li class="leading-snug">PMMS</li>
+                  <li class="leading-snug">1 Véhicule aléatoire</li>
+                  <li class="leading-snug">1 Arme blanche aléatoire</li>
+                  <li class="leading-snug">Déposer des props</li>
+                </ul>
+                <p class="mt-4 text-2xl font-bold text-white">49,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border-2 border-cyan-400/70 bg-black/50 p-6 backdrop-blur shadow-[0_0_32px_rgba(34,211,238,0.45),0_0_1px_rgba(165,243,252,0.9)_inset] sm:col-span-2 xl:col-span-1">
+                <h3 class="font-pricedown text-2xl text-cyan-200">Pack Deluxe</h3>
+                <ul class="mt-8 flex-1 list-disc list-outside space-y-0.5 pl-4 text-sm text-slate-300 marker:text-cyan-400/55">
+                  <li class="leading-snug">Serveur All-In non cliquable</li>
+                </ul>
+                <p class="mt-4 text-2xl font-bold text-white">99,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+            </div>
+          </section>
+
+          <section
+            id="shop-panel-rtoken"
+            role="tabpanel"
+            aria-labelledby="shop-tab-rtoken"
+            class="shop-panel hidden"
+            hidden
+          >
+            <h2 class="sr-only">R-Token</h2>
+            <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+              <article class="flex flex-col rounded-2xl border border-cyan-400/40 bg-black/50 p-6 backdrop-blur shadow-[0_0_24px_rgba(34,211,238,0.2)]">
+                <h3 class="font-pricedown text-2xl text-cyan-200">50 R-Tokens</h3>
+                <p class="mt-4 flex-1 text-sm text-slate-300">Recharge légère pour un achat ponctuel.</p>
+                <p class="mt-4 text-2xl font-bold text-white">2,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border border-cyan-400/40 bg-black/50 p-6 backdrop-blur shadow-[0_0_24px_rgba(34,211,238,0.2)]">
+                <h3 class="font-pricedown text-2xl text-cyan-200">150 R-Tokens</h3>
+                <p class="mt-4 flex-1 text-sm text-slate-300">Recharge intermédiaire pour plusieurs achats en boutique.</p>
+                <p class="mt-4 text-2xl font-bold text-white">7,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border border-cyan-400/50 bg-gradient-to-b from-cyan-500/10 to-black/55 p-6 backdrop-blur shadow-[0_0_28px_rgba(34,211,238,0.3)]">
+                <h3 class="font-pricedown text-2xl text-cyan-100">300 R-Tokens</h3>
+                <p class="mt-4 flex-1 text-sm text-slate-300">Meilleur rapport quantité / prix.</p>
+                <p class="mt-4 text-2xl font-bold text-white">14,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/55 bg-cyan-500/28 px-4 py-2.5 text-sm font-semibold text-cyan-50 shadow-[0_0_20px_rgba(34,211,238,0.32)] transition hover:bg-cyan-500/36 hover:shadow-[0_0_26px_rgba(34,211,238,0.42)]">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border border-cyan-400/40 bg-black/50 p-6 backdrop-blur shadow-[0_0_24px_rgba(34,211,238,0.2)]">
+                <h3 class="font-pricedown text-2xl text-cyan-200">500 R-Tokens</h3>
+                <p class="mt-4 flex-1 text-sm text-slate-300">Grosse recharge pour les joueurs actifs.</p>
+                <p class="mt-4 text-2xl font-bold text-white">24,99&nbsp;€</p>
+                <button type="button" class="mt-4 rounded-xl border border-cyan-400/50 bg-cyan-500/25 px-4 py-2.5 text-sm font-semibold text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.25)] transition hover:bg-cyan-500/35 hover:shadow-[0_0_24px_rgba(34,211,238,0.4)]">Acheter</button>
+              </article>
+            </div>
+          </section>
+
+          <section
+            id="shop-panel-vehicules"
+            role="tabpanel"
+            aria-labelledby="shop-tab-vehicules"
+            class="shop-panel hidden"
+            hidden
+          >
+            <h2 class="sr-only">Véhicules</h2>
+            <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              <article class="flex flex-col rounded-2xl border border-white/15 bg-black/45 p-6 backdrop-blur">
+                <h3 class="font-pricedown text-2xl text-white">Comet S2</h3>
+                <p class="mt-2 flex-1 text-sm text-slate-300">Sportive premium, ligne agressive.</p>
+                <p class="mt-4 text-lg font-semibold text-riseCyan">800 R-Tokens</p>
+                <button type="button" class="mt-4 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border border-white/15 bg-black/45 p-6 backdrop-blur">
+                <h3 class="font-pricedown text-2xl text-white">Jester RR</h3>
+                <p class="mt-2 flex-1 text-sm text-slate-300">Coupe tunable, polyvalente ville / route.</p>
+                <p class="mt-4 text-lg font-semibold text-riseCyan">1200 R-Tokens</p>
+                <button type="button" class="mt-4 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15">Acheter</button>
+              </article>
+              <article class="flex flex-col rounded-2xl border border-white/15 bg-black/45 p-6 backdrop-blur">
+                <h3 class="font-pricedown text-2xl text-white">Sultan RS Classic</h3>
+                <p class="mt-2 flex-1 text-sm text-slate-300">Icone drift, customization étendue.</p>
+                <p class="mt-4 text-lg font-semibold text-riseCyan"> R-Tokens</p>
+                <button type="button" class="mt-4 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/15">Acheter</button>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-auto flex-shrink-0 px-6 py-10 border-t border-white/15 bg-white/5">
+    <div class="mx-auto max-w-[1400px] text-center text-slate-300">&copy; 2025 Rise - Tous droits réservés</div>
+  </footer>
+
+  <script>
+    document.getElementById("menu-button")?.addEventListener("click", () => {
+      document.getElementById("mobile-menu")?.classList.toggle("hidden");
+    });
+
+    const tabActive = [
+      "border-cyan-400/40",
+      "bg-cyan-500/15",
+      "text-white",
+      "shadow-[0_0_20px_rgba(34,211,238,0.12)]",
+    ];
+    const tabInactive = [
+      "border-white/10",
+      "bg-white/5",
+      "text-white/75",
+      "shadow-none",
+    ];
+
+    function setShopTab(id) {
+      const tabs = document.querySelectorAll("[data-shop-tab]");
+      const panels = document.querySelectorAll(".shop-panel");
+
+      tabs.forEach((btn) => {
+        const active = btn.dataset.shopTab === id;
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+        btn.classList.remove(...(active ? tabInactive : tabActive));
+        btn.classList.add(...(active ? tabActive : tabInactive));
+        if (!active) {
+          btn.classList.add("hover:border-white/20", "hover:bg-white/10", "hover:text-white");
+        } else {
+          btn.classList.remove("hover:border-white/20", "hover:bg-white/10", "hover:text-white");
+        }
+      });
+
+      panels.forEach((panel) => {
+        const match = panel.id === "shop-panel-" + id;
+        panel.classList.toggle("hidden", !match);
+        panel.toggleAttribute("hidden", !match);
+      });
+    }
+
+    document.querySelectorAll("[data-shop-tab]").forEach((btn) => {
+      btn.addEventListener("click", () => setShopTab(btn.dataset.shopTab));
+    });
+
+    setShopTab("abonnement");
+  </script>
+</body>
+</html>
