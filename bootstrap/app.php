@@ -17,6 +17,9 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/game/ping',
         ]);
 
+        $middleware->redirectGuestsTo('/admin/login');
+        $middleware->redirectUsersTo('/admin');
+
         $middleware->alias([
             'player.online' => \App\Http\Middleware\EnsurePlayerOnline::class,
         ]);

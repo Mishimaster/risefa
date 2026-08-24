@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\CrimeOrganizationController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\LegalJobController;
 use App\Http\Controllers\Auth\GameAuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ShopController;
@@ -32,3 +36,15 @@ Route::get('/shop/checkout/retour', [ShopController::class, 'checkoutReturn'])
     ->middleware('player.online')
     ->name('shop.checkout.return');
 Route::get('/shop/merci', [ShopController::class, 'thankyou'])->name('shop.thankyou');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('login.submit');
+
+    Route::middleware('auth')->group(function () {
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+        Route::get('/', DashboardController::class)->name('dashboard');
+        Route::resource('jobs', LegalJobController::class)->except(['show']);
+        Route::resource('organizations', CrimeOrganizationController::class)->except(['show']);
+    });
+});
