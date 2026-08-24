@@ -101,7 +101,6 @@ class LegalJobController extends Controller
         }
 
         $directory = public_path('uploads/jobs');
-        File::ensureDirectoryExists($directory);
 
         $filename = Str::random(40).'.'.$request->file('image')->getClientOriginalExtension();
         $request->file('image')->move($directory, $filename);
