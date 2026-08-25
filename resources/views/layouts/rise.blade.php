@@ -82,6 +82,8 @@
     <div class="mx-auto max-w-[1400px] text-center text-slate-300">&copy; {{ date('Y') }} Rise - Tous droits réservés</div>
   </footer>
 
+  <livewire:faq-chat />
+
   <script>
     document.getElementById("menu-button")?.addEventListener("click", () => {
       document.getElementById("mobile-menu")?.classList.toggle("hidden");

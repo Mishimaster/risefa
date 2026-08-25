@@ -4,7 +4,7 @@
 @section('heading', 'Tableau de bord')
 
 @section('content')
-<div class="grid gap-6 sm:grid-cols-2">
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
   <a href="{{ route('admin.jobs.index') }}" class="rounded-2xl border border-emerald-400/20 bg-emerald-500/5 p-6 transition hover:border-emerald-400/40 hover:bg-emerald-500/10">
     <p class="text-sm uppercase tracking-widest text-emerald-300/80">Métiers légaux</p>
     <p class="mt-3 text-4xl font-semibold text-white">{{ $jobsCount }}</p>
@@ -14,6 +14,11 @@
     <p class="text-sm uppercase tracking-widest text-rose-300/80">Organisations</p>
     <p class="mt-3 text-4xl font-semibold text-white">{{ $orgsCount }}</p>
     <p class="mt-2 text-sm text-slate-400">Gérer les organisations criminelles</p>
+  </a>
+  <a href="{{ route('admin.faq.index') }}" class="rounded-2xl border border-purple-400/20 bg-purple-500/5 p-6 transition hover:border-purple-400/40 hover:bg-purple-500/10">
+    <p class="text-sm uppercase tracking-widest text-purple-300/80">FAQ / Chatbot</p>
+    <p class="mt-3 text-4xl font-semibold text-white">{{ $faqCount }}</p>
+    <p class="mt-2 text-sm text-slate-400">Questions du chatbot</p>
   </a>
 </div>
 @endsection

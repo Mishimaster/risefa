@@ -43,7 +43,6 @@
 
       <ul class="hidden md:flex items-center gap-8 text-[1.125rem] font-medium font-pricedown">
         <li><a href="{{ route('home') }}" @if(request()->routeIs('home')) aria-current="page" @endif class="{{ $navLink('home') }}">Accueil</a></li>
-        <li><a href="{{ route('faq') }}" @if(request()->routeIs('faq')) aria-current="page" @endif class="{{ $navLink('faq') }}">FAQ</a></li>
         <li class="relative group">
           <button type="button" class="{{ $enJeuActive ? 'text-white' : 'text-white/60 hover:text-white transition' }}">En jeu</button>
           <div class="absolute right-0 top-full hidden pt-2 group-hover:block group-focus-within:block">
@@ -71,7 +70,6 @@
     @endif
     <ul class="flex flex-col gap-2 text-[1.125rem] font-medium font-pricedown">
       <li><a href="{{ route('home') }}" class="{{ $navLinkMobile('home') }}">Accueil</a></li>
-      <li><a href="{{ route('faq') }}" class="{{ $navLinkMobile('faq') }}">FAQ</a></li>
       <li class="rounded-lg border border-white/10 bg-black/60 p-2">
         <p class="px-2 pb-2 text-white/70">En jeu</p>
         <a href="{{ route('metiers-legaux') }}" class="block rounded-lg px-3 py-2 text-riseCyan {{ request()->routeIs('metiers-legaux') ? 'bg-white/10 pointer-events-none' : 'hover:bg-white/5' }}">Métiers légaux</a>

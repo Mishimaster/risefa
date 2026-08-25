@@ -20,6 +20,11 @@ return [
         'private_key' => env('TEBEX_PRIVATE_KEY'),
     ],
 
+    'faq' => [
+        // Seuil du chatbot (0–100). ~45 = souple mais pas trop de faux positifs.
+        'match_threshold' => (float) env('RISE_FAQ_MATCH_THRESHOLD', 45),
+    ],
+
     'seo' => [
         'site_name' => 'Rise FA',
         'keywords' => 'Rise FA, risefa, serveur RP, roleplay GTA 5, GTA V RP, FiveM, serveur français, GTA RP, Los Santos RP',

@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             AdminUserSeeder::class,
             LegalJobSeeder::class,
             CrimeOrganizationSeeder::class,
+            FaqEntrySeeder::class,
         ]);
     }
 }

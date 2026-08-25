@@ -12,11 +12,6 @@ class PageController extends RisePageController
         return $this->risePage('home', 'pages.home');
     }
 
-    public function faq(): \Illuminate\View\View
-    {
-        return $this->risePage('faq', 'pages.faq');
-    }
-
     public function metiersLegaux(): \Illuminate\View\View
     {
         $jobs = LegalJob::query()->orderBy('sort_order')->orderBy('name')->get();

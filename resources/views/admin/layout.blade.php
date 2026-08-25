@@ -17,6 +17,7 @@
         <a href="{{ route('admin.dashboard') }}" class="block rounded-lg px-3 py-2 {{ request()->routeIs('admin.dashboard') ? 'bg-white/10 text-white' : 'text-slate-400 hover:bg-white/5 hover:text-white' }}">Tableau de bord</a>
         <a href="{{ route('admin.jobs.index') }}" class="block rounded-lg px-3 py-2 {{ request()->routeIs('admin.jobs.*') ? 'bg-emerald-500/15 text-emerald-100' : 'text-slate-400 hover:bg-white/5 hover:text-white' }}">Métiers légaux</a>
         <a href="{{ route('admin.organizations.index') }}" class="block rounded-lg px-3 py-2 {{ request()->routeIs('admin.organizations.*') ? 'bg-rose-500/15 text-rose-100' : 'text-slate-400 hover:bg-white/5 hover:text-white' }}">Organisations</a>
+        <a href="{{ route('admin.faq.index') }}" class="block rounded-lg px-3 py-2 {{ request()->routeIs('admin.faq.*') ? 'bg-purple-500/15 text-purple-100' : 'text-slate-400 hover:bg-white/5 hover:text-white' }}">FAQ / Chatbot</a>
         <a href="{{ route('home') }}" target="_blank" class="block rounded-lg px-3 py-2 text-slate-400 hover:bg-white/5 hover:text-white">Voir le site</a>
       </nav>
       <form method="POST" action="{{ route('admin.logout') }}" class="mt-10">
@@ -34,6 +35,7 @@
         <div class="flex items-center gap-3 md:hidden">
           <a href="{{ route('admin.jobs.index') }}" class="text-sm text-emerald-300">Métiers</a>
           <a href="{{ route('admin.organizations.index') }}" class="text-sm text-rose-300">Orgs</a>
+          <a href="{{ route('admin.faq.index') }}" class="text-sm text-purple-300">FAQ</a>
         </div>
       </header>
 
