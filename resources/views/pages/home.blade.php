@@ -4,20 +4,17 @@
 <main class="flex-1 w-full">
 
     <section class="relative min-h-screen px-6 pt-32 pb-14 flex items-center">
-      <div class="mx-auto w-full max-w-[1400px]">
+      <div class="mx-auto w-full rise-container">
         <div class="rounded-[3rem] border border-white/15 bg-black/40 p-10 sm:p-14 md:p-16 min-h-[460px] md:min-h-[520px] flex flex-col justify-center backdrop-blur shadow-[0_0_55px_rgba(51,153,255,0.18)]">
-          <div class="inline-flex items-center gap-3 text-lg sm:text-2xl tracking-widest text-white/80 font-semibold">
-            <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
-            GTA RP • Los Santos • Roleplay immersif
-          </div>
-          <h1 class="mt-5 font-pricedown text-[4.6rem] sm:text-[6.2rem] md:text-[8.8rem] leading-[0.88] text-white drop-shadow-[0_0_24px_rgba(51,153,255,0.45)]">Rise</h1>
-          <p class="mt-5 max-w-3xl text-xl sm:text-3xl md:text-[2.45rem] text-slate-200">Vivez une expérience roleplay immersive et unique à Los Santos</p>
+          <p class="sr-only">Serveur GTA RP Los Santos — roleplay immersif FiveM</p>
+          <h1 class="font-pricedown text-[6rem] sm:text-[8rem] md:text-[11rem] min-[1920px]:text-[13rem] min-[2560px]:text-[15rem] leading-[0.85] text-white drop-shadow-[0_0_24px_rgba(51,153,255,0.45)]">Rise</h1>
+          <p class="mt-12 sm:mt-14 md:mt-16 max-w-3xl min-[1920px]:max-w-4xl text-xl sm:text-3xl md:text-[2.45rem] min-[1920px]:text-[2.85rem] min-[2560px]:text-[3.2rem] text-slate-200">Vivez une expérience roleplay immersive et unique à Los Santos</p>
         </div>
       </div>
     </section>
 
     <section id="features" class="reveal px-6 py-20">
-      <div class="mx-auto max-w-[1400px]">
+      <div class="mx-auto rise-container">
         <h2 class="font-pricedown text-5xl text-center mb-4 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Pourquoi Rise ?</h2>
         <p class="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">Un serveur GTA RP pensé pour l'immersion, la progression et une communauté exigeante.</p>
 
@@ -62,7 +59,7 @@
     </section>
 
     <section id="Discord" class="reveal px-6 py-20">
-      <div class="mx-auto max-w-[1400px]">
+      <div class="mx-auto rise-container">
         <h2 class="font-pricedown text-5xl text-center mb-10 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Discord</h2>
         <div class="grid gap-8 md:grid-cols-3">
           <a href="https://discord.gg/dS8XJqWPd3" target="_blank" class="rounded-3xl border border-white/15 bg-black/40 backdrop-blur p-8 text-center origin-center hover:scale-[1.03] hover:border-2 hover:border-[#5865F2] transition-all duration-300">
@@ -97,7 +94,7 @@
     </section>
 
     <section id="regles" class="reveal px-6 py-20">
-      <div class="mx-auto max-w-[1400px]">
+      <div class="mx-auto rise-container">
         <h2 class="font-pricedown text-5xl text-center mb-10 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Règles du serveur</h2>
         <div class="grid gap-8 md:grid-cols-3">
           <a href="https://docs.google.com/document/d/1WnLW0XmfFpyMMH4nV_Vj25cpkmhkNtXLwZY_D4cstR4/edit?usp=sharing" target="_blank" class="group relative overflow-hidden rounded-3xl border border-white/15 bg-black/40 min-h-[340px] origin-center hover:scale-[1.03] hover:border-2 hover:border-cyan-300 transition-all duration-300">
@@ -129,7 +126,7 @@
     </section>
 
     <section class="reveal px-6 py-20">
-      <div class="mx-auto max-w-[1400px]">
+      <div class="mx-auto rise-container">
         <h2 class="font-pricedown text-5xl text-center mb-4 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Système économique réaliste</h2>
         <p class="mx-auto mb-12 max-w-2xl text-center text-lg text-slate-400">Une progression naturelle, un équilibre constant entre légal et illégal.</p>
 
@@ -165,20 +162,20 @@
     </section>
 
     <section id="rejoindre" class="reveal px-6 py-20">
-      <div class="mx-auto max-w-[1400px]">
+      <div class="mx-auto rise-container">
         <h2 class="font-pricedown text-5xl text-center mb-10 bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Prêt à commencer ?</h2>
         <div class="mx-auto max-w-3xl rounded-3xl border border-white/15 bg-black/40 p-10 backdrop-blur text-center">
           <h3 class="font-pricedown text-3xl mb-4">Connectez-vous et commencez votre histoire !</h3>
-          <p class="text-slate-300">Cliquez sur le bouton ci-dessous pour copier l'IP, puis collez-la dans la console FiveM.</p>
-          <button id="server-ip" data-connect="{{ config('rise.server.connect') }}" class="mt-4 inline-flex items-center gap-2 rounded-xl border-2 border-cyan-300/70 bg-cyan-300/15 px-6 py-3 text-cyan-100 text-lg font-bold shadow-[0_0_20px_rgba(103,232,249,0.2)] hover:scale-[1.03] hover:bg-cyan-300/25 hover:border-cyan-200 hover:shadow-[0_0_30px_rgba(103,232,249,0.35)] transition-all duration-200">
-            📋 Copier l'IP : {{ config('rise.server.connect') }}
-          </button>
+          <p class="text-slate-300">Cliquez sur le bouton ci-dessous pour rejoindre Rise FA directement via FiveM.</p>
+          <a href="{{ config('rise.server.join_url') }}" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 rounded-xl border-2 border-cyan-300/70 bg-cyan-300/15 px-6 py-3 text-cyan-100 text-lg font-bold shadow-[0_0_20px_rgba(103,232,249,0.2)] hover:scale-[1.03] hover:bg-cyan-300/25 hover:border-cyan-200 hover:shadow-[0_0_30px_rgba(103,232,249,0.35)] transition-all duration-200">
+            Se connecter au serveur
+          </a>
         </div>
       </div>
     </section>
 
     <section class="reveal px-6 py-16 border-t border-white/15 bg-white/5">
-      <div class="mx-auto max-w-[1400px] grid gap-8 md:grid-cols-3 text-center">
+      <div class="mx-auto rise-container grid gap-8 md:grid-cols-3 text-center">
         <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">2046</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Slots disponibles</p></div>
         <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">24/7</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Support en ligne</p></div>
         <div><h2 class="font-pricedown text-6xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">100%</h2><p class="mt-2 text-slate-300 uppercase tracking-widest text-xs">Roleplay immersif</p></div>

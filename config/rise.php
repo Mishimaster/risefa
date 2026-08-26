@@ -7,6 +7,7 @@ return [
     'server' => [
         'name' => env('RISE_SERVER_NAME', 'risefa'),
         'connect' => env('RISE_SERVER_CONNECT', 'connect 217.182.207.101:37825'),
+        'join_url' => env('RISE_SERVER_JOIN_URL', 'https://cfx.re/join/bdddblp'),
         'slots' => (int) env('RISE_SERVER_SLOTS', 128),
     ],
 

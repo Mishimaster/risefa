@@ -104,13 +104,14 @@ new class extends Component
   <button
     type="button"
     wire:click="toggle"
-    class="ml-auto flex h-14 w-14 items-center justify-center rounded-full border border-purple-300/40 bg-gradient-to-br from-purple-500 to-fuchsia-600 text-white shadow-[0_0_30px_rgba(168,85,247,0.45)] transition hover:scale-105"
+    class="relative ml-auto flex h-[4.25rem] w-[4.25rem] items-center justify-center rounded-full border-2 border-purple-200/70 bg-gradient-to-br from-purple-400 via-fuchsia-500 to-purple-600 text-white shadow-[0_0_36px_rgba(192,132,252,0.75),0_0_12px_rgba(255,255,255,0.25)] transition hover:scale-110 hover:shadow-[0_0_48px_rgba(216,180,254,0.9)]"
     aria-label="Ouvrir l'assistant FAQ"
   >
+    <span class="pointer-events-none absolute inset-0 animate-ping rounded-full bg-purple-300/30" aria-hidden="true"></span>
     @if ($open)
-      <span class="text-xl leading-none">×</span>
+      <span class="relative text-3xl leading-none font-light">×</span>
     @else
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative h-9 w-9 drop-shadow" aria-hidden="true">
         <path fill-rule="evenodd" d="M4.804 21.644A6.707 6.707 0 0 0 6 21.75a6.721 6.721 0 0 0 3.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 0 1-.814 1.686.75.75 0 0 0 .44 1.223ZM8.25 10.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM10.875 12a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clip-rule="evenodd" />
       </svg>
     @endif
