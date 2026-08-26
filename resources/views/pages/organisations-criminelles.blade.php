@@ -3,7 +3,7 @@
 @section('content')
 <main class="flex-1 w-full px-6 pt-36 pb-16">
 
-    <section class="mx-auto rise-container">
+    <section class="mx-auto max-w-[1400px]">
       <div class="pointer-events-none absolute left-[12%] top-[45%] h-64 w-64 rounded-full bg-rose-300/15 blur-[85px] smoke"></div>
       <div class="w-full rounded-[2.5rem] border border-rose-300/20 bg-black/40 p-8 sm:p-10 backdrop-blur shadow-[0_0_50px_rgba(251,113,133,0.2)]">
         <h1 class="font-pricedown text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-rose-300 to-white bg-clip-text text-transparent">Organisations criminelles</h1>
@@ -12,7 +12,7 @@
     </section>
 
     @forelse ($categories as $category)
-      <section id="{{ $category->slug }}" class="mx-auto mt-8 rise-container">
+      <section id="{{ $category->slug }}" class="mx-auto mt-8 max-w-[1400px]">
         <div class="rounded-[2.2rem] border border-rose-300/20 bg-black/40 p-8 backdrop-blur">
           <h2 class="font-pricedown text-5xl text-center mb-8 bg-gradient-to-r from-rose-300 to-white bg-clip-text text-transparent">{{ $category->name }}</h2>
           <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-center">
@@ -29,10 +29,10 @@
         </div>
       </section>
     @empty
-      <p class="mx-auto mt-8 rise-container rounded-2xl border border-white/10 bg-black/40 p-8 text-center text-slate-400">Aucune organisation n'est publiée pour le moment.</p>
+      <p class="mx-auto mt-8 max-w-[1400px] rounded-2xl border border-white/10 bg-black/40 p-8 text-center text-slate-400">Aucune organisation n'est publiée pour le moment.</p>
     @endforelse
 
-    <section id="creer-org" class="mx-auto mt-8 rise-container">
+    <section id="creer-org" class="mx-auto mt-8 max-w-[1400px]">
       <div class="rounded-[2.5rem] border border-rose-300/25 bg-black/40 p-8 sm:p-10 backdrop-blur shadow-[0_0_45px_rgba(251,113,133,0.18)]">
         <h2 class="font-pricedown text-5xl text-center mb-3 bg-gradient-to-r from-rose-300 to-white bg-clip-text text-transparent">Créer votre organisation</h2>
         <p class="mx-auto mb-10 max-w-2xl text-center text-slate-400">Trois conditions pour fonder votre organisation criminelle et intégrer le RP illégal sur Rise FA.</p>

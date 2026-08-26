@@ -79,7 +79,7 @@
   @yield('content')
 
   <footer class="mt-auto flex-shrink-0 px-6 py-10 border-t border-white/15 bg-white/5">
-    <div class="mx-auto rise-container text-center text-slate-300">&copy; {{ date('Y') }} Rise - Tous droits réservés</div>
+    <div class="mx-auto max-w-[1400px] text-center text-slate-300">&copy; {{ date('Y') }} Rise - Tous droits réservés</div>
   </footer>
 
   <livewire:faq-chat />

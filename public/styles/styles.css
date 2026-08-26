@@ -130,39 +130,3 @@ header a img.nav-logo-glow-rose,
 header img.nav-logo-glow-rose {
   filter: drop-shadow(0 0 18px rgba(251, 113, 133, 0.85)) drop-shadow(0 0 34px rgba(244, 63, 94, 0.4));
 }
-
-/* Conteneur site : s’élargit sur grands écrans (>1920) */
-.rise-container {
-  width: 100%;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1920px) {
-  html {
-    font-size: 106.25%; /* ~17px : scale léger des rem */
-  }
-
-  .rise-container {
-    max-width: 1680px;
-  }
-
-  header nav img {
-    height: 5.75rem;
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    font-size: 112.5%; /* ~18px */
-  }
-
-  .rise-container {
-    max-width: 2000px;
-  }
-
-  header nav img {
-    height: 6.5rem;
-  }
-}

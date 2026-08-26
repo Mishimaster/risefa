@@ -2,7 +2,7 @@
 
 @section('content')
 <main class="flex-1 w-full px-6 pt-36 pb-16">
-  <div class="mx-auto rise-container">
+  <div class="mx-auto max-w-[1400px]">
     <div class="mb-10 rounded-[2.5rem] border border-cyan-300/20 bg-black/40 p-8 sm:p-10 backdrop-blur shadow-[0_0_50px_rgba(51,153,255,0.18)]">
       <h1 class="font-pricedown text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent">Mon compte</h1>
       <p class="mt-3 max-w-2xl text-lg text-slate-300">Wallet et profil liés à votre personnage ESX.</p>

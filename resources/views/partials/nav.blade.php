@@ -9,7 +9,7 @@
 @endphp
 
 <header class="fixed top-0 left-0 right-0 z-50 border-b border-cyan-300/20 bg-black/70 backdrop-blur px-[5%] py-4">
-  <nav class="mx-auto flex rise-container items-center justify-between gap-4">
+  <nav class="mx-auto flex max-w-[1400px] items-center justify-between gap-4">
     <a href="{{ route('home') }}" class="flex items-center">
       <img src="{{ asset('images/' . ($theme['logo'] ?? 'logorisefa.png')) }}" alt="{{ $theme['logo_alt'] ?? 'Rise' }}" class="{{ $theme['logo_glow'] ?? 'nav-logo-glow-cyan' }} h-20 w-auto object-contain" />
     </a>
@@ -42,7 +42,7 @@
           </span>
         </div>
 
-        <ul class="flex items-center gap-8 min-[1920px]:gap-10 text-[1.35rem] min-[1920px]:text-[1.5rem] min-[2560px]:text-[1.65rem] font-medium font-pricedown">
+        <ul class="flex items-center gap-8 text-[1.35rem] font-medium font-pricedown">
           <li><a href="{{ route('home') }}" @if(request()->routeIs('home')) aria-current="page" @endif class="{{ $navLink('home') }}">Accueil</a></li>
           <li class="relative group">
             <button type="button" class="{{ $enJeuActive ? 'text-white' : 'text-white/60 hover:text-white transition' }}">En jeu</button>
